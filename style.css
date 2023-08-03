@@ -30,6 +30,10 @@ body {
 .app {
   margin: 0 auto;
   width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header form {
@@ -97,9 +101,8 @@ main {
 }
 
 .firstcat {
-  width: 100%;
   white-space: nowrap;
-  width: 40.3rem;
+  width: 100vw;
 }
 
 main h1 {
@@ -145,7 +148,7 @@ figure {
 
 .tags {
   margin-top: 1rem;
-  width: 215px;
+  max-width: 21.5rem;
 }
 
 section p {
@@ -173,24 +176,57 @@ footer {
   align-items: center;
   gap: 1rem;
   color: white;
+  
 }
 
-@media (min-width: 1200px) {
+header {
+  --startY: -100%;
+  animation: move 0.2s;
+}
+
+footer {
+  animation: move 0.2s;
+  --startY: 100%;
+}
+
+.item {
+  animation: appear 0.5s;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY));
+  }
+}
+
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  transform: scale(0.7);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1270px) {
   main {
     
     display: flex;
   }
 
-  header {
-    width: 100%;
-  }
-
-  footer {
-    width: 100%;
-  }
+  
 
   .firstcat {
     width: 80.3rem;
+    animation: appear 0.5s;
   }
 
   .left {
