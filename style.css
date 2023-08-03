@@ -19,7 +19,7 @@ input {
 
 body {
   font-size: 1.6rem;
-  width: 100vw;
+  
 }
 
 :root {
@@ -28,7 +28,6 @@ body {
 }
 
 .app {
-  display: grid;
   margin: 0 auto;
   width: 100%;
 }
@@ -43,7 +42,6 @@ header {
   align-items: center;
   padding: 1.6rem 2.5rem;
   background-color: var(--color-base-blue);
-  width: 100vw;
   width: 100%;
   gap: 1.6rem 2.5rem;
 }
@@ -82,10 +80,8 @@ main {
   margin: 0 auto;
   display: grid;
   gap: 3.1rem;
-  
-  
+  justify-content: center;
 }
-
 
 .left p,
 .polegar {
@@ -102,7 +98,6 @@ main {
 
 .firstcat {
   width: 100%;
-  max-height: 40.5rem;
   white-space: nowrap;
   width: 40.3rem;
 }
@@ -130,9 +125,7 @@ main img:nth-child(4) {
   border-radius: 8px;
 }
 
-main p {
-  width: 38rem;
-}
+
 
 section {
   display: flex;
@@ -152,6 +145,7 @@ figure {
 
 .tags {
   margin-top: 1rem;
+  width: 215px;
 }
 
 section p {
@@ -167,47 +161,51 @@ section h2 {
   margin-top: 2rem;
 }
 
+.left p {
+  max-width: 38.2rem;
+}
 
 footer {
   background-color: var(--color-base-blue2);
   display: flex;
   padding: 1.6rem;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 1rem;
   color: white;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 1200px) {
   main {
-    min-width: 102.1rem;
+    
     display: flex;
   }
-  
+
   header {
-    width: 100vw;
+    width: 100%;
+  }
+
+  footer {
     width: 100%;
   }
 
   .firstcat {
-   width: 80.3rem;
+    width: 80.3rem;
   }
 
   .left {
     margin-right: 4.85rem;
-    margin-left: 10.9rem ;
+    margin-left: 10.9rem;
     margin-top: 4.4rem;
     margin-bottom: 3.9rem;
   }
 
   .left p {
-    width: 80.0rem;
+    max-width: 80rem;
   }
 
   .container {
     
     margin-top: 3.7rem;
   }
-
 }
